@@ -15,3 +15,10 @@
 `docker run -it ubuntu`  -it is to login inside a container 
 
 as soon as you `exit` the container which you started using `-it` it will terminate the container
+
+
+`docker run nginx` 
+
+`docker run -d nginx`  `-d` is used to run the container in background ... 
+
+
