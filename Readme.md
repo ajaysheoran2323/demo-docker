@@ -22,3 +22,5 @@ as soon as you `exit` the container which you started using `-it` it will termin
 `docker run -d nginx`  `-d` is used to run the container in background ... 
 
 
+` docker exec -it  9a64d5d63bdc /bin/bash` 
+
