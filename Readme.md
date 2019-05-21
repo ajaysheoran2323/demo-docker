@@ -46,3 +46,5 @@ How to remove a stopped container:
 How to remove a running container :
 
 `docker rm -f <container_id>`
+
+You cannot remove a running container. Stop the container before attempting removal or force remove
