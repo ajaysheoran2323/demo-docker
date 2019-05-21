@@ -48,3 +48,10 @@ How to remove a running container :
 `docker rm -f <container_id>`
 
 You cannot remove a running container. Stop the container before attempting removal or force remove
+
+
+### Volumes
+
+docker run -it -v /home/ubuntu/demo:/root  ubuntu
+
+content inside "demo" will be available inside "root"
