@@ -29,9 +29,15 @@ How to stop a running container:
 
 `docker container stop <container_id>`
 
+You can always restart a stopped container by using `docker start <container_Id>` command. 
+ 
 How to kill a running container 
 
 `docker kill <container_id>`
+
+You can always restart a stopped container by using `docker start <container_Id>` command. 
+
+
 
 How to remove a stopped container:
 
