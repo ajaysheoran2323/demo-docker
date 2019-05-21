@@ -24,3 +24,19 @@ as soon as you `exit` the container which you started using `-it` it will termin
 
 ` docker exec -it  9a64d5d63bdc /bin/bash` 
 
+
+How to stop a running container:
+
+`docker container stop <container_id>`
+
+How to kill a running container 
+
+`docker kill <container_id>`
+
+How to remove a stopped container:
+
+`docker rm <container_id>`
+
+How to remove a running container :
+
+`docker rm -f <container_id>`
