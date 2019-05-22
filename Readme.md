@@ -60,10 +60,22 @@ content inside "demo" will be available inside "root"
 
 How to list images:
 
+ `docker images ls `
+
+How to pull an image:
+
+`docker pull ubuntu ` 
+
+`docker pull mysql`
+
+`docker pull <image name >`
+
+
 How to remove an image
 
+`docker image rm <image_id>`
 
 
-### How to push images to hub.docker.com
+### How to push images to https://hub.docker.com
 
 ![image](https://user-images.githubusercontent.com/31384241/58144246-4572b100-7c6b-11e9-93a8-8e3f459caf63.png)
