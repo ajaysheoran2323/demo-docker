@@ -56,6 +56,13 @@ docker run -it -v /home/ubuntu/demo:/root  ubuntu
 
 content inside "demo" will be available inside "root"
 
+### Images
+
+How to list images:
+
+How to remove an image
+
+
 
 ### How to push images to hub.docker.com
 
