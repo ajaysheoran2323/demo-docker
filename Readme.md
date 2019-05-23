@@ -79,3 +79,17 @@ How to remove an image
 ### How to push images to https://hub.docker.com
 
 ![image](https://user-images.githubusercontent.com/31384241/58144246-4572b100-7c6b-11e9-93a8-8e3f459caf63.png)
+
+
+## Dockerfile Format
+
+```
+FROM 
+MAINTAINER
+COPY 
+ADD
+RUN
+CMD 
+EXPOSE 
+ENTRYPOINT
+```
