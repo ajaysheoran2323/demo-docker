@@ -114,3 +114,15 @@ aafc701d7f7c        host                host                local
 `docker inspect image_id`
 
 `docker inspect network_id`
+
+
+### Task 
+
+1. Create a  bridge network with name "dummy2"
+2. Create a container with name "part1" and nginx image  (use "dummy2" network)
+3. Create another container with name "part2" and nginx image  (use "dummy2" network)
+3. Do inspect "dummy2" network and copy the IP address of both containers to your notepad.  
+
+ example:    part1  = ipv4 = 172.18.0.2
+             part2  = ipv4 = 172.18.0.3
+4. Login to  "part1" container using `docker exec ` command and type `ping <ip address of part2 container>`
