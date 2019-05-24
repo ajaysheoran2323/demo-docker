@@ -93,3 +93,24 @@ CMD
 EXPOSE 
 ENTRYPOINT
 ```
+
+
+### Docker Networking 
+
+`docker network ls `  To list all the available networks 
+
+By default, there are 3 networks available ..... "bridge", "host",  "null"
+
+```
+docker network ls 
+NETWORK ID          NAME                DRIVER              SCOPE
+00c488f2a5ae        bridge              bridge              local
+aafc701d7f7c        host                host                local
+8f2f1c422f10        none                null                local
+```
+
+`docker inspect container_id`
+
+`docker inspect image_id`
+
+`docker inspect network_id`
