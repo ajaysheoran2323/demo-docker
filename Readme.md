@@ -146,6 +146,14 @@ RUN service nginx restart
 EXPOSE 80 
 ```
 
+After that build the image from Dockerfile 
+`docker build -t repoName:tag .`
+
+`docker image ls ` will give you latest image id 
+
+`docker run -d -p 80:80 <image_id >`
+
+after that go to browser and paste linux IP address...
 
 
 
