@@ -126,3 +126,31 @@ aafc701d7f7c        host                host                local
  example:    part1  = ipv4 = 172.18.0.2
              part2  = ipv4 = 172.18.0.3
 4. Login to  "part1" container using `docker exec ` command and type `ping <ip address of part2 container>`
+
+
+### task 2:
+1. create `index.html` file on your local machine.  
+2. vi index.html  ---> my name is ajay kumar
+3. save index.html 
+4. create Dockerfile
+
+`index.html` file and `Dockerfile` should be in same directory.
+
+Write a Dockerfile :
+
+```
+FROM nginx:latest
+COPY index.html /var/www/html/index.html
+RUN service nginx restart
+
+EXPOSE 80 
+```
+
+
+
+
+
+
+
+
+
