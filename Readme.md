@@ -159,6 +159,41 @@ after that go to browser and paste linux IP address...
 
 
 
+## Docker-compose 
 
+format:
+
+```
+version: "3"
+
+services:
+  redis_container:
+    image: redis:alpine
+    ports:
+      - "6379"
+    deploy:
+      replicas: 2
+
+  db:
+    image: postgres:9.4
+    ports:
+      - "5432"
+
+  vote:
+    image: dockersamples/examplevotingapp_vote:before
+    ports:
+      - "5000:8080"
+    depends_on:
+      - redis_container
+      
+  nginx_container:
+    image: nginx:latest 
+    ports:
+      - 80:80
+    depends_on:
+      - vote
+    
+    
+```
 
 
