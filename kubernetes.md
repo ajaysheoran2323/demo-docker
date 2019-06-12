@@ -40,9 +40,94 @@ how to push yaml file inside kubernetes ...
 
 
          
+https://static.brandonpotter.com/kubernetes/DeploymentBuilder.html
+
+Deployment
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # Unique key of the Deployment instance
+  name: deployment-example  
+  namespace: devops
+spec:
+  # 3 Pods should exist at all times.
+  replicas: 
+  selector:
+    matchLabels:
+      app: deployment-example
+  template:
+    metadata:
+      labels:
+        # Apply this label to pods and default
+        # the Deployment label selector to this value
+        app: deployment-example
+    spec:
+      containers:
+      - name: deployment-example
+        # Run this image
+        image: nginx:latest
+```
+===Daemonset=============================================================================
+```
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  # Unique key of the DaemonSet instance
+  name: daemonset-example
+  namespace: devops
+spec:
+  template:
+    metadata:
+      labels:
+        app: daemonset-example
+    spec:
+      containers:
+      # This container is run once on each Node in the cluster
+      - name: daemonset-example
+        image: nginx:latest
+
+================================================================================
+```
+Deployment + Service
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  namespace: devops
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: 'nginx:latest'
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace:
+  labels:
+    name: nginx-service
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    app: nginx
+  type: LoadBalancer
 
 
-
+```
 
 
 
